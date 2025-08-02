@@ -1,35 +1,26 @@
-# Sofle_RGB_ZMK
+## 改键
 
-72 LED Sofle RGB using ZMK 3.2
+当前键位：
 
-![20230421_005150](https://user-images.githubusercontent.com/103195644/233544056-fd9f0372-fd23-49db-a1d4-80f3d91f2b13.jpg)
+![layer 0](https://github.com/loggerhead/zmk-sofle/blob/master/assets/layer0.png)
+![layer 1](https://github.com/loggerhead/zmk-sofle/blob/master/assets/layer1.png)
+![layer 2](https://github.com/loggerhead/zmk-sofle/blob/master/assets/layer2.png)
 
-![keyboard-layout (1)](https://github.com/Preacher325/Sofle_RGB_ZMK/assets/103195644/da32258f-aede-4ab4-9a9b-e10e400d24c1)
+1. 进入 https://nickcoutsos.github.io/keymap-editor/ 绑定当前仓库；
+2. 改键完成后点「Save」保存键位配置到 git 仓库，触发 Github Action 完成编译后，下载编译好的固件；
+3. 双击键盘上的「Reset」按钮，进入 USB 模式，此时电脑能识别到一个 USB 设备（类似 U 盘），将新的固件拖进去即可；
 
-Shields: Sofle RGB v2.1 PCB
+  ![reset button](https://github.com/loggerhead/zmk-sofle/blob/master/assets/reset_button.jpg)
 
-Boards: nice!nano v2.0
+如果只是改键位，左右手分别放入对应的固件即可。比如左手放入 `sofle_left-nice_nano_v2-zmk.uf2`，右手放入 `sofle_right-nice_nano_v2-zmk.uf2`。
+如果要重置固件，需要按顺序操作：
 
-Sockets: Jameco Valuepro 6100-1X14-R Single-in-Line Strip Socket, 0.100" Pitch, 14 Pin, 0.160" Lead Length
+1. 左右手先烧录 `settings_reset-nice_nano_v2-zmk.uf2`，左右同时按一下「Reset」按钮，完成左右手的蓝牙配对；
+2. 右手按「改键位」的流程烧录 `sofle_right-nice_nano_v2-zmk.uf2`；
+3. 左手按「改键位」的流程烧录 `sofle_left-nice_nano_v2-zmk.uf2`；
+4. 默认固件都放在了 `assets/firmware` 目录下；
 
-Batteries: 3.7V 850mAh LiPo
+## 硬件
 
-OLED: 128X32 OLED Screen
-
-Switches: Gateron Brown
-
-Encoders: AlpsAlpine EC11N1524402 
-
-LEDS: SK6812MINI
-
-Switches: Gikfun Micro Slide Switch Toggle Switch
-
-Case: Sofle RGB Analyst Case
-
-Standoffs: 11MM
-
-Pads: 5mm
-
-Keycaps: Artifact Bloom Series Keycap Set: Glow
-
-Knobs: Glorious Rotary Knobs
+- 主控: nice!nano v2.0
+- 电池: 3.7V 2000mAh 聚合物锂电池

@@ -11,8 +11,9 @@
 3. 双击键盘上的「Reset」按钮，进入 USB 模式，此时电脑能识别到一个 USB 设备（类似 U 盘），将新的固件拖进去即可；
    - 固件的文件名无所谓，拖进去后 macbook 会自动断开设备（显示设备非预期断开），但实际上固件烧录成功了；
    - 设备中的固件文件名固定是 `CURRENT.uf2`，烧录成功后也没有任何变化，不用在意；
+   - 「Reset」按钮的位置：
 
-  <img src="./assets/reset_button.jpg" height="400">
+      <img src="./assets/reset_button.jpg" height="400">
 
 如果只是改键位，左右手分别放入对应的固件即可。比如左手放入 `sofle_left-nice_nano_v2-zmk.uf2`，右手放入 `sofle_right-nice_nano_v2-zmk.uf2`。
 如果要重置固件，需要按顺序操作：

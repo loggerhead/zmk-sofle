@@ -10,7 +10,13 @@
 2. 改键完成后点「Save」保存键位配置到 git 仓库，触发 Github Action 完成编译后，下载编译好的固件；
 3. 双击键盘上的「Reset」按钮，进入 USB 模式，此时电脑能识别到一个 USB 设备（类似 U 盘），将新的固件拖进去即可；
    - 固件的文件名无所谓，拖进去后 macbook 会自动断开设备（显示设备非预期断开），但实际上固件烧录成功了；
+
+      <img src="./assets/usb_ejected.png">
+
    - 设备中的固件文件名固定是 `CURRENT.uf2`，烧录成功后也没有任何变化，不用在意；
+
+      <img src="./assets/usb_files.png">
+
    - 「Reset」按钮的位置：
 
       <img src="./assets/reset_button.jpg" height="400">
